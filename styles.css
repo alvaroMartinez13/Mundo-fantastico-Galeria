@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0; 
+  height: 128vh;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.form-container h2{
+  color: #333;
+  text-transform: uppercase;
+}
+
+.form-container input{
+  width: 70%;
+  padding: 3px;
+}
+
+button{
+  padding: 8px;
+  background-color: #1bc87d;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #024511;
+  cursor: pointer;
+}
+
+button:hover{
+  transform: scale(1.1);
+}
+
+.image-innitial{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 78px;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px;
+  gap: 68px 32px;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  cursor: pointer;
+  margin-top: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+  border: 2px solid #ddd; 
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image:hover img {
+  transform: scale(1.1);
+}
+
+
+.image:hover {
+  transform: scale(1.05);
+  box-shadow: 16px 9px 8px rgba(105, 206, 92, 0.575);
+}
+
+.image h3 {
+  color: #333;
+  text-align: center;
+  overflow: hidden;
+  font-size: 13px;
+  display: -webkit-box;
+  display: box;
+  -webkit-line-clamp: 1;  
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  box-orient: vertical; 
+  line-height: 1.2em;
+  height: 1.4em; 
+  text-overflow: ellipsis;
+}
+
+.botones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 8px;
+}
+
+.botones button{
+  padding: 8px;
+  font-size: 9px;
+  color: rgb(246, 246, 246);
+}
+
+.botones #delete-image{
+  background-color: red;
+}
+
+.botones #see-image{
+  background-color: rgb(13, 99, 135);
+  font-size: 10px;
+}
+
+.pagination {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  justify-content: center;
+  background-color: #1d4502;
+  width: 100%;
+  z-index: 1;
+}
+
+.page-button {
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.page-button.active {
+  background-color: #1bc87d; 
+  color: #fff;
+}
+
+.modal{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-color: #33333380;
+  z-index: 2;
+}
+
+.modal .modal-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ddd;
+  padding: 20px;
+  gap: 10px;
+}
+
+.modal .modal-container img{
+  border: 1px solid #024511;
+  min-width: 10px;
+  min-height: 250px;
+  width: 25%;
+  height: 80%;
+  border-radius: 5px;
+}
+
+.modal .modal-container input{
+  width: 70%;
+  padding: 3px;
+}
+
+.botones_info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.botones_info button{
+  padding: 10px 20px;
+  color: #ddd;
+}
+
+.botones_info #edit-image{
+  background-color: #d7860b;
+}
+
+.botones_info #close{
+  background-color: red;
+}
+
+@media (max-width: 768px) {
+  .image {
+    width: 150px;
+    height: 150px;
+  }
+}
